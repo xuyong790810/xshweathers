@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E477A4A2180142C0026D832 /* LeftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A492180142C0026D832 /* LeftTableViewController.swift */; };
+		2E477A4D218014740026D832 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A4B218014740026D832 /* LeftTableViewCell.swift */; };
+		2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E477A4C218014740026D832 /* LeftTableViewCell.xib */; };
+		2E477A52218058B90026D832 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A50218058B90026D832 /* RightTableViewCell.swift */; };
+		2E477A53218058B90026D832 /* RightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E477A51218058B90026D832 /* RightTableViewCell.xib */; };
+		2EB30BDE2176CE0E003FA85D /* weatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30BDC2176CE0E003FA85D /* weatherCell.swift */; };
+		2EB30BDF2176CE0E003FA85D /* weatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EB30BDD2176CE0E003FA85D /* weatherCell.xib */; };
+		2EB3F30C215DBA25002D9864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F30B215DBA25002D9864 /* AppDelegate.swift */; };
+		2EB3F30E215DBA25002D9864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F30D215DBA25002D9864 /* ViewController.swift */; };
+		2EB3F311215DBA25002D9864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB3F30F215DBA25002D9864 /* Main.storyboard */; };
+		2EB3F313215DBA26002D9864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB3F312215DBA26002D9864 /* Assets.xcassets */; };
+		2EB3F316215DBA26002D9864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB3F314215DBA26002D9864 /* LaunchScreen.storyboard */; };
+		2EB3F321215DBA26002D9864 /* celatest1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F320215DBA26002D9864 /* celatest1Tests.swift */; };
+		2EB3F32C215DBA26002D9864 /* celatest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F32B215DBA26002D9864 /* celatest1UITests.swift */; };
+		2EB3F33A215DBA8A002D9864 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F339215DBA8A002D9864 /* MainViewController.swift */; };
+		2EB3F33C215DBAA4002D9864 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */; };
+		2EB3F33E215DBAC0002D9864 /* RightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EB3F31D215DBA26002D9864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EB3F300215DBA25002D9864 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EB3F307215DBA25002D9864;
+			remoteInfo = celatest1;
+		};
+		2EB3F328215DBA26002D9864 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EB3F300215DBA25002D9864 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EB3F307215DBA25002D9864;
+			remoteInfo = celatest1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E477A492180142C0026D832 /* LeftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewController.swift; sourceTree = "<group>"; };
+		2E477A4B218014740026D832 /* LeftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewCell.swift; sourceTree = "<group>"; };
+		2E477A4C218014740026D832 /* LeftTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftTableViewCell.xib; sourceTree = "<group>"; };
+		2E477A50218058B90026D832 /* RightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
+		2E477A51218058B90026D832 /* RightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightTableViewCell.xib; sourceTree = "<group>"; };
+		2EB30BDC2176CE0E003FA85D /* weatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherCell.swift; sourceTree = "<group>"; };
+		2EB30BDD2176CE0E003FA85D /* weatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weatherCell.xib; sourceTree = "<group>"; };
+		2EB3F308215DBA25002D9864 /* celatest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celatest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB3F30B215DBA25002D9864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2EB3F30D215DBA25002D9864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EB3F310215DBA25002D9864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EB3F312215DBA26002D9864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EB3F315215DBA26002D9864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EB3F317215DBA26002D9864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EB3F31C215DBA26002D9864 /* celatest1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = celatest1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB3F320215DBA26002D9864 /* celatest1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celatest1Tests.swift; sourceTree = "<group>"; };
+		2EB3F322215DBA26002D9864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EB3F327215DBA26002D9864 /* celatest1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = celatest1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB3F32B215DBA26002D9864 /* celatest1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celatest1UITests.swift; sourceTree = "<group>"; };
+		2EB3F32D215DBA26002D9864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EB3F339215DBA8A002D9864 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EB3F305215DBA25002D9864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB3F319215DBA26002D9864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB3F324215DBA26002D9864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E477A4F218014910026D832 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				2E477A4B218014740026D832 /* LeftTableViewCell.swift */,
+				2E477A50218058B90026D832 /* RightTableViewCell.swift */,
+				2E477A51218058B90026D832 /* RightTableViewCell.xib */,
+				2E477A4C218014740026D832 /* LeftTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		2EB3F2FF215DBA25002D9864 = {
+			isa = PBXGroup;
+			children = (
+				2E477A4F218014910026D832 /* cells */,
+				2EB3F30A215DBA25002D9864 /* celatest1 */,
+				2EB3F31F215DBA26002D9864 /* celatest1Tests */,
+				2EB3F32A215DBA26002D9864 /* celatest1UITests */,
+				2EB3F309215DBA25002D9864 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EB3F309215DBA25002D9864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EB3F308215DBA25002D9864 /* celatest1.app */,
+				2EB3F31C215DBA26002D9864 /* celatest1Tests.xctest */,
+				2EB3F327215DBA26002D9864 /* celatest1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EB3F30A215DBA25002D9864 /* celatest1 */ = {
+			isa = PBXGroup;
+			children = (
+				2E477A492180142C0026D832 /* LeftTableViewController.swift */,
+				2EB3F339215DBA8A002D9864 /* MainViewController.swift */,
+				2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */,
+				2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */,
+				2EB3F30B215DBA25002D9864 /* AppDelegate.swift */,
+				2EB3F30D215DBA25002D9864 /* ViewController.swift */,
+				2EB30BDC2176CE0E003FA85D /* weatherCell.swift */,
+				2EB30BDD2176CE0E003FA85D /* weatherCell.xib */,
+				2EB3F30F215DBA25002D9864 /* Main.storyboard */,
+				2EB3F312215DBA26002D9864 /* Assets.xcassets */,
+				2EB3F314215DBA26002D9864 /* LaunchScreen.storyboard */,
+				2EB3F317215DBA26002D9864 /* Info.plist */,
+			);
+			path = celatest1;
+			sourceTree = "<group>";
+		};
+		2EB3F31F215DBA26002D9864 /* celatest1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2EB3F320215DBA26002D9864 /* celatest1Tests.swift */,
+				2EB3F322215DBA26002D9864 /* Info.plist */,
+			);
+			path = celatest1Tests;
+			sourceTree = "<group>";
+		};
+		2EB3F32A215DBA26002D9864 /* celatest1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2EB3F32B215DBA26002D9864 /* celatest1UITests.swift */,
+				2EB3F32D215DBA26002D9864 /* Info.plist */,
+			);
+			path = celatest1UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EB3F307215DBA25002D9864 /* celatest1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB3F330215DBA26002D9864 /* Build configuration list for PBXNativeTarget "celatest1" */;
+			buildPhases = (
+				2EB3F304215DBA25002D9864 /* Sources */,
+				2EB3F305215DBA25002D9864 /* Frameworks */,
+				2EB3F306215DBA25002D9864 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = celatest1;
+			productName = celatest1;
+			productReference = 2EB3F308215DBA25002D9864 /* celatest1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EB3F31B215DBA26002D9864 /* celatest1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB3F333215DBA26002D9864 /* Build configuration list for PBXNativeTarget "celatest1Tests" */;
+			buildPhases = (
+				2EB3F318215DBA26002D9864 /* Sources */,
+				2EB3F319215DBA26002D9864 /* Frameworks */,
+				2EB3F31A215DBA26002D9864 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EB3F31E215DBA26002D9864 /* PBXTargetDependency */,
+			);
+			name = celatest1Tests;
+			productName = celatest1Tests;
+			productReference = 2EB3F31C215DBA26002D9864 /* celatest1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2EB3F326215DBA26002D9864 /* celatest1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB3F336215DBA26002D9864 /* Build configuration list for PBXNativeTarget "celatest1UITests" */;
+			buildPhases = (
+				2EB3F323215DBA26002D9864 /* Sources */,
+				2EB3F324215DBA26002D9864 /* Frameworks */,
+				2EB3F325215DBA26002D9864 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EB3F329215DBA26002D9864 /* PBXTargetDependency */,
+			);
+			name = celatest1UITests;
+			productName = celatest1UITests;
+			productReference = 2EB3F327215DBA26002D9864 /* celatest1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EB3F300215DBA25002D9864 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "徐勇";
+				TargetAttributes = {
+					2EB3F307215DBA25002D9864 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					2EB3F31B215DBA26002D9864 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 2EB3F307215DBA25002D9864;
+					};
+					2EB3F326215DBA26002D9864 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 2EB3F307215DBA25002D9864;
+					};
+				};
+			};
+			buildConfigurationList = 2EB3F303215DBA25002D9864 /* Build configuration list for PBXProject "celatest1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EB3F2FF215DBA25002D9864;
+			productRefGroup = 2EB3F309215DBA25002D9864 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EB3F307215DBA25002D9864 /* celatest1 */,
+				2EB3F31B215DBA26002D9864 /* celatest1Tests */,
+				2EB3F326215DBA26002D9864 /* celatest1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EB3F306215DBA25002D9864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E477A53218058B90026D832 /* RightTableViewCell.xib in Resources */,
+				2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */,
+				2EB30BDF2176CE0E003FA85D /* weatherCell.xib in Resources */,
+				2EB3F316215DBA26002D9864 /* LaunchScreen.storyboard in Resources */,
+				2EB3F313215DBA26002D9864 /* Assets.xcassets in Resources */,
+				2EB3F311215DBA25002D9864 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB3F31A215DBA26002D9864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB3F325215DBA26002D9864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EB3F304215DBA25002D9864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E477A4D218014740026D832 /* LeftTableViewCell.swift in Sources */,
+				2EB3F33A215DBA8A002D9864 /* MainViewController.swift in Sources */,
+				2E477A52218058B90026D832 /* RightTableViewCell.swift in Sources */,
+				2E477A4A2180142C0026D832 /* LeftTableViewController.swift in Sources */,
+				2EB30BDE2176CE0E003FA85D /* weatherCell.swift in Sources */,
+				2EB3F33C215DBAA4002D9864 /* LeftViewController.swift in Sources */,
+				2EB3F30E215DBA25002D9864 /* ViewController.swift in Sources */,
+				2EB3F33E215DBAC0002D9864 /* RightTableViewController.swift in Sources */,
+				2EB3F30C215DBA25002D9864 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB3F318215DBA26002D9864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB3F321215DBA26002D9864 /* celatest1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB3F323215DBA26002D9864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EB3F32C215DBA26002D9864 /* celatest1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EB3F31E215DBA26002D9864 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EB3F307215DBA25002D9864 /* celatest1 */;
+			targetProxy = 2EB3F31D215DBA26002D9864 /* PBXContainerItemProxy */;
+		};
+		2EB3F329215DBA26002D9864 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EB3F307215DBA25002D9864 /* celatest1 */;
+			targetProxy = 2EB3F328215DBA26002D9864 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EB3F30F215DBA25002D9864 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EB3F310215DBA25002D9864 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EB3F314215DBA26002D9864 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EB3F315215DBA26002D9864 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EB3F32E215DBA26002D9864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2EB3F32F215DBA26002D9864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EB3F331215DBA26002D9864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4X97G7FBJ;
+				INFOPLIST_FILE = celatest1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xy.celatest1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2EB3F332215DBA26002D9864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4X97G7FBJ;
+				INFOPLIST_FILE = celatest1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xy.celatest1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2EB3F334215DBA26002D9864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4X97G7FBJ;
+				INFOPLIST_FILE = celatest1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xy.celatest1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/celatest1.app/celatest1";
+			};
+			name = Debug;
+		};
+		2EB3F335215DBA26002D9864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4X97G7FBJ;
+				INFOPLIST_FILE = celatest1Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xy.celatest1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/celatest1.app/celatest1";
+			};
+			name = Release;
+		};
+		2EB3F337215DBA26002D9864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4X97G7FBJ;
+				INFOPLIST_FILE = celatest1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xy.celatest1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = celatest1;
+			};
+			name = Debug;
+		};
+		2EB3F338215DBA26002D9864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4X97G7FBJ;
+				INFOPLIST_FILE = celatest1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xy.celatest1UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = celatest1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EB3F303215DBA25002D9864 /* Build configuration list for PBXProject "celatest1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB3F32E215DBA26002D9864 /* Debug */,
+				2EB3F32F215DBA26002D9864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EB3F330215DBA26002D9864 /* Build configuration list for PBXNativeTarget "celatest1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB3F331215DBA26002D9864 /* Debug */,
+				2EB3F332215DBA26002D9864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EB3F333215DBA26002D9864 /* Build configuration list for PBXNativeTarget "celatest1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB3F334215DBA26002D9864 /* Debug */,
+				2EB3F335215DBA26002D9864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EB3F336215DBA26002D9864 /* Build configuration list for PBXNativeTarget "celatest1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB3F337215DBA26002D9864 /* Debug */,
+				2EB3F338215DBA26002D9864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EB3F300215DBA25002D9864 /* Project object */;
+}
