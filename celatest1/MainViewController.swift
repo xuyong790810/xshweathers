@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
         //self.title="我的天气app"
         self.view.backgroundColor=UIColor.purple
        //layoutNavgate(date: "3-11", weekDay: "周二", city: "北海")
-        layoutNavgate(date:Tools.returnDateString(date: NSDate()), weekDay: "周一", city: "南宁")
+        layoutNavgate(date:Tools.returnDateString(date: NSDate()), weekDay: Tools.returnWeekdayString(date: NSDate()), city: "南宁")
     }
     
     func layoutNavgate(date:String,weekDay:String,city:String)
