@@ -17,45 +17,33 @@ class MainViewController: UIViewController {
         //self.title="我的天气app"
         self.view.backgroundColor=UIColor.purple
        //layoutNavgate(date: "3-11", weekDay: "周二", city: "北海")
-        layoutNavgate(date: "5-14", weekDay: "周一", city: "南宁")
+        layoutNavgate(date:Tools.returnDateString(date: NSDate()), weekDay: "周一", city: "南宁")
     }
+    
     func layoutNavgate(date:String,weekDay:String,city:String)
-    {
-        //导航条前景色改为白色
-        self.navigationController?.navigationBar.tintColor=UIColor.white
-        //定义导航按钮
-        let catogryBarItem=UIBarButtonItem(image: UIImage(named: "category_hover"), style: .plain, target: self, action: #selector(chooseDate))
-        let dateBarItem=UIBarButtonItem(title: date+"/"+weekDay, style: .plain, target: nil, action: nil)
-       //dateBarItem.isEnabled=false self.navigationItem.leftBarButtonItems=[catogryBarItem,dateBarItem]
+   {
+
+self.navigationController?.navigationBar.tintColor=UIColor.white
+    let catogryBarItem=UIBarButtonItem(image: UIImage(named: "category_hover"), style: .plain, target: self, action: #selector(chooseAction))
+    let dateBarItem=UIBarButtonItem(title: date+"/"+weekDay, style: .plain, target: self, action: #selector(chooseAction))
+    let cityBarItem=UIBarButtonItem(title: city, style: .plain, target: nil, action: nil)
+    let settingBarItem=UIBarButtonItem(image: UIImage(named: "settings_normal"), style: .plain, target: self, action: #selector(setting))
+    let shareBarItem=UIBarButtonItem(image: UIImage(named: "share_small_link"), style: .plain, target: self, action: #selector(shares))
+   self.navigationItem.rightBarButtonItems=[shareBarItem,cityBarItem,settingBarItem]
+self.navigationItem.leftBarButtonItems=[catogryBarItem,dateBarItem]
     }
-   @objc func chooseDate()
+    @objc func shares()
     {
-    print("chooseDate")
+      print("share")
     }
-//    func layoutNavgate(date:String,weekDay:String,city:String)
-//   {
-//
-//self.navigationController?.navigationBar.tintColor=UIColor.white
-//    let catogryBarItem=UIBarButtonItem(image: UIImage(named: "category_hover"), style: .plain, target: self, action: #selector(chooseAction))
-//    let dateBarItem=UIBarButtonItem(title: date+"/"+weekDay, style: .plain, target: self, action: #selector(chooseAction))
-//    let cityBarItem=UIBarButtonItem(title: city, style: .plain, target: nil, action: nil)
-//    let settingBarItem=UIBarButtonItem(image: UIImage(named: "settings_normal"), style: .plain, target: self, action: #selector(setting))
-//    let shareBarItem=UIBarButtonItem(image: UIImage(named: "share_small_link"), style: .plain, target: self, action: #selector(shares))
-//   self.navigationItem.rightBarButtonItems=[shareBarItem,cityBarItem,settingBarItem]
-//self.navigationItem.leftBarButtonItems=[catogryBarItem,dateBarItem]
-//    }
-//    @objc func shares()
-//    {
-//      print("share")
-//    }
-//    @objc func setting()
-//    {
-//        print("setting")
-//    }
-// @objc   func chooseAction()
-//    {
-//        print("choosedate")
-//    }
+    @objc func setting()
+    {
+        print("setting")
+    }
+ @objc   func chooseAction()
+    {
+        print("choosedate")
+    }
 //    func layoutNavigate(date:String,weekDay:String,cityName:String)
 //  {
 //    self.navigationController?.navigationBar.tintColor=UIColor.white

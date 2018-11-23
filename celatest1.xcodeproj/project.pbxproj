@@ -24,6 +24,7 @@
 		2EB3F33A215DBA8A002D9864 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F339215DBA8A002D9864 /* MainViewController.swift */; };
 		2EB3F33C215DBAA4002D9864 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */; };
 		2EB3F33E215DBAC0002D9864 /* RightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */; };
+		2ED8890321A7EBE50085AF31 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8890221A7EBE50085AF31 /* Tools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2EB3F339215DBA8A002D9864 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewController.swift; sourceTree = "<group>"; };
+		2ED8890221A7EBE50085AF31 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		2EB3F2FF215DBA25002D9864 = {
 			isa = PBXGroup;
 			children = (
+				2ED8890121A7EBC70085AF31 /* Tools */,
 				2E477A4F218014910026D832 /* cells */,
 				2EB3F30A215DBA25002D9864 /* celatest1 */,
 				2EB3F31F215DBA26002D9864 /* celatest1Tests */,
@@ -161,6 +164,14 @@
 				2EB3F32D215DBA26002D9864 /* Info.plist */,
 			);
 			path = celatest1UITests;
+			sourceTree = "<group>";
+		};
+		2ED8890121A7EBC70085AF31 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2ED8890221A7EBE50085AF31 /* Tools.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				2EB3F30E215DBA25002D9864 /* ViewController.swift in Sources */,
 				2EB3F33E215DBAC0002D9864 /* RightTableViewController.swift in Sources */,
 				2EB3F30C215DBA25002D9864 /* AppDelegate.swift in Sources */,
+				2ED8890321A7EBE50085AF31 /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
