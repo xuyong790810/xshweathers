@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E057BCB21AE74D600F5E1E9 /* mytools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E057BCA21AE74D600F5E1E9 /* mytools.swift */; };
 		2E477A4A2180142C0026D832 /* LeftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A492180142C0026D832 /* LeftTableViewController.swift */; };
 		2E477A4D218014740026D832 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A4B218014740026D832 /* LeftTableViewCell.swift */; };
 		2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E477A4C218014740026D832 /* LeftTableViewCell.xib */; };
@@ -24,6 +25,10 @@
 		2EB3F33A215DBA8A002D9864 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F339215DBA8A002D9864 /* MainViewController.swift */; };
 		2EB3F33C215DBAA4002D9864 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */; };
 		2EB3F33E215DBAC0002D9864 /* RightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */; };
+		2EC3E14921AE213200946B0F /* tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3E14821AE213200946B0F /* tool.swift */; };
+		2EC3E14C21AE2AEA00946B0F /* weatherBG.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */; };
+		2EC3E14E21AE399900946B0F /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3E14D21AE399900946B0F /* helper.swift */; };
+		2EC3E15121AE3B5800946B0F /* weathersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3E15021AE3B5800946B0F /* weathersInfo.swift */; };
 		2ED8890321A7EBE50085AF31 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8890221A7EBE50085AF31 /* Tools.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E057BCA21AE74D600F5E1E9 /* mytools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mytools.swift; sourceTree = "<group>"; };
 		2E477A492180142C0026D832 /* LeftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewController.swift; sourceTree = "<group>"; };
 		2E477A4B218014740026D832 /* LeftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewCell.swift; sourceTree = "<group>"; };
 		2E477A4C218014740026D832 /* LeftTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftTableViewCell.xib; sourceTree = "<group>"; };
@@ -68,6 +74,10 @@
 		2EB3F339215DBA8A002D9864 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewController.swift; sourceTree = "<group>"; };
+		2EC3E14821AE213200946B0F /* tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tool.swift; sourceTree = "<group>"; };
+		2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherBG.plist; sourceTree = "<group>"; };
+		2EC3E14D21AE399900946B0F /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		2EC3E15021AE3B5800946B0F /* weathersInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weathersInfo.swift; sourceTree = "<group>"; };
 		2ED8890221A7EBE50085AF31 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +120,8 @@
 		2EB3F2FF215DBA25002D9864 = {
 			isa = PBXGroup;
 			children = (
+				2EC3E14F21AE3B4600946B0F /* Models */,
+				2EC3E14D21AE399900946B0F /* helper.swift */,
 				2ED8890121A7EBC70085AF31 /* Tools */,
 				2E477A4F218014910026D832 /* cells */,
 				2EB3F30A215DBA25002D9864 /* celatest1 */,
@@ -166,10 +178,21 @@
 			path = celatest1UITests;
 			sourceTree = "<group>";
 		};
+		2EC3E14F21AE3B4600946B0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EC3E15021AE3B5800946B0F /* weathersInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2ED8890121A7EBC70085AF31 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */,
 				2ED8890221A7EBE50085AF31 /* Tools.swift */,
+				2EC3E14821AE213200946B0F /* tool.swift */,
+				2E057BCA21AE74D600F5E1E9 /* mytools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -279,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E477A53218058B90026D832 /* RightTableViewCell.xib in Resources */,
+				2EC3E14C21AE2AEA00946B0F /* weatherBG.plist in Resources */,
 				2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */,
 				2EB30BDF2176CE0E003FA85D /* weatherCell.xib in Resources */,
 				2EB3F316215DBA26002D9864 /* LaunchScreen.storyboard in Resources */,
@@ -310,12 +334,16 @@
 			files = (
 				2E477A4D218014740026D832 /* LeftTableViewCell.swift in Sources */,
 				2EB3F33A215DBA8A002D9864 /* MainViewController.swift in Sources */,
+				2EC3E14921AE213200946B0F /* tool.swift in Sources */,
+				2EC3E14E21AE399900946B0F /* helper.swift in Sources */,
 				2E477A52218058B90026D832 /* RightTableViewCell.swift in Sources */,
 				2E477A4A2180142C0026D832 /* LeftTableViewController.swift in Sources */,
 				2EB30BDE2176CE0E003FA85D /* weatherCell.swift in Sources */,
 				2EB3F33C215DBAA4002D9864 /* LeftViewController.swift in Sources */,
 				2EB3F30E215DBA25002D9864 /* ViewController.swift in Sources */,
 				2EB3F33E215DBAC0002D9864 /* RightTableViewController.swift in Sources */,
+				2EC3E15121AE3B5800946B0F /* weathersInfo.swift in Sources */,
+				2E057BCB21AE74D600F5E1E9 /* mytools.swift in Sources */,
 				2EB3F30C215DBA25002D9864 /* AppDelegate.swift in Sources */,
 				2ED8890321A7EBE50085AF31 /* Tools.swift in Sources */,
 			);

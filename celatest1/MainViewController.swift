@@ -15,9 +15,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.title="我的天气app"
-        self.view.backgroundColor=UIColor.purple
-       //layoutNavgate(date: "3-11", weekDay: "周二", city: "北海")
-        layoutNavgate(date:Tools.returnDateString(date: NSDate()), weekDay: Tools.returnWeekdayString(date: NSDate()), city: "南宁")
+        //self.view.backgroundColor=tool.colorWithHexString(hex: "ff6666")
+      layoutNavgate(date: mytools.returnDateString(date: NSDate()), weekDay: mytools.returnWeekDay(date: NSDate()), city: "北海")
+        //layoutNavgate(date:tool.returnDateString(date: NSDate()), weekDay:tool.returnWeekDayString(date: NSDate()), city: "南宁")
+        downloadData()
     }
     
     func layoutNavgate(date:String,weekDay:String,city:String)
@@ -30,7 +31,7 @@ self.navigationController?.navigationBar.tintColor=UIColor.white
     let settingBarItem=UIBarButtonItem(image: UIImage(named: "settings_normal"), style: .plain, target: self, action: #selector(setting))
     let shareBarItem=UIBarButtonItem(image: UIImage(named: "share_small_link"), style: .plain, target: self, action: #selector(shares))
    self.navigationItem.rightBarButtonItems=[shareBarItem,cityBarItem,settingBarItem]
-self.navigationItem.leftBarButtonItems=[catogryBarItem,dateBarItem]
+   self.navigationItem.leftBarButtonItems=[catogryBarItem,dateBarItem]
     }
     @objc func shares()
     {
@@ -63,7 +64,14 @@ self.navigationItem.leftBarButtonItems=[catogryBarItem,dateBarItem]
        let weathers = jsonstr!["result"] as! NSArray
            let weather=weathers[0] as! NSDictionary
             let weatherstr=weather["weather"] as! String
-            print(weatherstr)
+            //print(weatherstr)
+          //print( tool.colorWithHexString(hex: "ff6666"))
+            DispatchQueue.main.async {
+                self.view.backgroundColor = tool.returnWeatherBGColor(weatherType: weatherstr)
+            }
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: LeftControllerTypeChangedNotification), object: nil, userInfo: ["data":weathers])
+            //NotificationCenter.default.post(name: NSNotification.Name(rawValue: LeftControllerTypeChangedNotification), object: nil, userInfo: ["data":weathers])
         }
         datatask.resume()
     }

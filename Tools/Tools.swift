@@ -10,8 +10,11 @@ import Foundation
 class Tools
 {
    class  func returnDateString(date:NSDate)->String {
+    //定义日期格式的实例化
         let dateFormatter=DateFormatter()
+    //定位时区
         dateFormatter.locale=NSLocale(localeIdentifier: "ch") as Locale
+    //定义取得的日期格式
         dateFormatter.dateFormat="MM.dd"
     let datestring = dateFormatter.string(from: date as Date)
         return datestring
