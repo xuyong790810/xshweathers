@@ -18,7 +18,13 @@ class LeftTableViewCell: UITableViewCell {
     @IBOutlet weak var date1: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor=UIColor.black
+        date1.textColor=UIColor.white
+        date2.textColor=UIColor.white
         weather3.adjustsFontSizeToFitWidth=true
+        view1.layer.cornerRadius=10
+        weather2.textAlignment = .center
+        view1.bounds.size=CGSize(width: 70, height: 80)
         // Initialization code
     }
 

@@ -32,17 +32,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-qc-BXj">
-                        <rect key="frame" x="191" y="12" width="145" height="76"/>
+                        <rect key="frame" x="161" y="12" width="120" height="76"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暴风雪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ct-u6-cTP">
-                                <rect key="frame" x="33" y="14" width="81" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-5-3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CE-oc-pPn">
+                                <rect key="frame" x="20" y="47" width="81" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-5-3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CE-oc-pPn">
-                                <rect key="frame" x="33" y="47" width="81" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暴风雪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ct-u6-cTP">
+                                <rect key="frame" x="20" y="8" width="81" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -52,15 +52,15 @@
                         <color key="backgroundColor" red="0.35335144369999999" green="1" blue="0.54239166839999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="76" id="6E2-6o-ASu"/>
-                            <constraint firstAttribute="width" constant="145" id="8uv-aT-Ojl"/>
+                            <constraint firstAttribute="width" constant="120" id="8uv-aT-Ojl"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="kZ4-Oi-OLo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34" id="3Uw-ie-CwX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Eqf-qc-BXj" secondAttribute="trailing" constant="125" id="GFZ-jO-f0u"/>
                     <constraint firstItem="ETI-PG-ZcM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34" id="HtI-ZP-Up8"/>
                     <constraint firstItem="kZ4-Oi-OLo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="KXt-XS-cOT"/>
-                    <constraint firstAttribute="trailing" secondItem="Eqf-qc-BXj" secondAttribute="trailing" constant="90" id="L6d-PI-wy6"/>
                     <constraint firstItem="ETI-PG-ZcM" firstAttribute="top" secondItem="kZ4-Oi-OLo" secondAttribute="bottom" constant="8" id="X51-i4-bLn"/>
                     <constraint firstItem="Eqf-qc-BXj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qf0-ei-Yp6"/>
                 </constraints>

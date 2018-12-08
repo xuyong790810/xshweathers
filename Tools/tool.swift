@@ -52,6 +52,24 @@ class tool
         }
         
     }
+    class func returncolorString(hex:String)->UIColor
+    {
+        //FF6688
+        //去掉一些字符whitespacesAndNewlines。uppercased()大写
+        var cString:String=hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+        //截取字符串
+       let rString = (cString as NSString).substring(to: 2)
+        let gString = ((cString as NSString).substring(from: 2)as NSString).substring(to: 2)
+        let bString=((cString as NSString).substring(from: 4)as NSString)
+        //定义三个变量
+         var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        //提取字符串里的数字，然后转换成int32数字，存储在r，g，b
+        Scanner(string: rString).scanHexInt32(&r)
+         Scanner(string: gString).scanHexInt32(&g)
+        Scanner(string: bString as String).scanHexInt32(&b)
+        return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
+        
+    }
     class func colorWithHexString (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         // hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
@@ -59,7 +77,7 @@ class tool
             cString = (cString as NSString).substring(from: 1)
         }
         
-        if (cString.characters.count != 6) {
+        if (cString.count != 6) {
             return UIColor.gray
         }
         //取到六位十六进制数的前2位
@@ -79,7 +97,38 @@ class tool
         
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
     }
-    
+    class func returnWeatherType(weatherType:String)->String
+    {
+        let weatherTypePath=Bundle.main.path(forResource: "weatherBG", ofType: "plist")
+        if weatherTypePath != nil
+        {
+            let json=NSDictionary(contentsOfFile: weatherTypePath!)
+            for element in (json?.allKeys)!
+            {
+                if weatherType.hasPrefix(element as! String)
+                {
+                    return element as! String
+                }
+            }
+        }
+        return weatherType
+    }
+    class func retrunweatherColor(weatherType:String)->UIColor
+    {
+        //获取plist文件内容
+       let weatherTypePath=Bundle.main.path(forResource: "weatherBG", ofType: "plist")
+        let jsonDic  = NSDictionary(contentsOfFile: weatherTypePath!)
+        for element in (jsonDic?.allKeys)!
+        {
+           if element as! String==weatherType||weatherType.hasPrefix(element as! String)
+           {
+            let key=element as! String
+            let value=jsonDic![key] as! String
+            return tool.returncolorString(hex:value)
+            }
+        }
+        return UIColor.gray
+    }
     class func returnWeatherBGColor(weatherType:String)->UIColor {
         let weatherTypePath = Bundle.main.path(forResource: "weatherBG", ofType: "plist")
         if weatherTypePath != nil {

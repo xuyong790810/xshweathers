@@ -9,50 +9,43 @@
 import UIKit
 
 class LeftTableViewController: UITableViewController {
-    var dataSource=[weathersInfo]()
+    //定义空数组
+    var dataSource=[NSDictionary]()
     override func viewDidLoad() {
         super.viewDidLoad()
+       self.view.backgroundColor=UIColor.black
         let nib = UINib(nibName: "LeftTableViewCell", bundle: Bundle.main)
         self.tableView.register(nib, forCellReuseIdentifier: "mycell")
         self.tableView.rowHeight=100
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshdata), name: NSNotification.Name(rawValue: LeftControllerTypeChangedNotification), object: nil)
-        //NotificationCenter.default.addObserver(self, selector: #selector(refreshdata), name: NSNotification.Name(rawValue: LeftControllerTypeChangedNotification), object: nil)
+        //通知中心添加监视
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshdata), name: NSNotification.Name(rawValue: "leftdata"), object: nil)
+       
     }
     @objc   func refreshdata(sender:NSNotification)
     {
-       
+      //取出传过来的数组
         let userinfo=sender.userInfo!["data"] as! NSArray
-        //dataSource=userinfo as! [NSDictionary]
-                for info in userinfo
-                {
-                    let dic=info as! NSDictionary
-                   let weather=weathersInfo(dic: dic)
-                    dataSource.append(weather)
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-        
-                }
-//        DispatchQueue.main.async {
-//            self.tableView.reloadData()
-//        }
-        
-//       for info in userinfo
-//       {
-//        let dic=info as! NSDictionary
+      for fo in userinfo
+      {
+        let dic = fo as! NSDictionary
+         dataSource.append(dic)
+       
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
 //
-//        }
+//                for info in userinfo
+//                {
+//                    let dic=info as! NSDictionary
+//                   let weather=weathersInfo(dic: dic)
+//                    dataSource.append(weather)
+//                    DispatchQueue.main.async {
+//                        self.tableView.reloadData()
+//                    }
 //
-//        for info in userinfo
-//        {
-//            let dic=info as! NSDictionary
-//            // let weather=weathersInfo(dic: dic)
-//            dataSource.append(dic)
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//
-//        }
+//                }
+
      
     }
     override func didReceiveMemoryWarning() {
@@ -76,46 +69,37 @@ class LeftTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath) as! LeftTableViewCell
-        let info=dataSource[indexPath.row]
-        cell.date1.text=info.week as! String
-        let date2=info.days
-        let dateformatter=DateFormatter()
+        //取一行数据
+       let info = dataSource[indexPath.row]
+        //从字典中取星期几
+        cell.date1.text=info["week"] as! String
+        //从字典里取日期
+        let date2str=info["days"]
+        //cell.date2.text=date2str as! String
+       let dateformatter=DateFormatter()
         dateformatter.dateFormat="YYYY-MM-dd"
-        let date = dateformatter.date(from: date2! as! String)
-        
+        let date = dateformatter.date(from: date2str! as! String )
         dateformatter.dateFormat="MM-dd"
         let date2string =  dateformatter.string(from: date!)
-        cell.date2.text=date2string
-               cell.weather2.text=info.weather as? String
-                cell.weather3.text=info.temperature as? String
-        cell.view1.backgroundColor=tool.returnWeatherBGColor(weatherType: info.weather!)
+       cell.date2.text=date2string
+        cell.weather2.text=info["weather"] as! String
+        cell.weather3.text=info["temperature"] as! String
+//        cell.weather2.text=tool.returnWeatherType(weatherType: info["weather"]! as! String)
+//        cell.weather3.text=(info["temperature"] as! String)
+//        cell.view1.backgroundColor=tool.retrunweatherColor(weatherType: info["weather"] as! String)
+//        //cell.view1.backgroundColor=tool.returnWeatherBGColor(weatherType: info["weather"]! as! String)
+        //第一行是今天
         if indexPath.row==0
         {
             cell.date1.text="今天"
         }
+        //第二行是明天
         if indexPath.row==1
         {
             cell.date1.text="明天"
         }
         return cell
-//        let info=dataSource[indexPath.row]
-//        cell.date1.text=info["week"] as? String
-//        var date2=info["days"] as? String
-//
-//        let dateformatter=DateFormatter()
-//        dateformatter.dateFormat="YYYY-MM-dd"
-//     let date =   dateformatter.date(from: date2!)
-//        dateformatter.dateFormat="MM-dd"
-//        let date2string =  dateformatter.string(from: date!)
-//        cell.date2.text=date2string
-//        cell.weather2.text=info["weather"] as? String
-//        cell.weather3.text=info["temperature"] as? String
-//        //        let dayWeatherInfo = self.dataSource[indexPath.row]
-//        //        cell.dateLabel.text = Tool.retrunNeedDay(dayWeatherInfo.days!)
-//        //        cell.weekDayLabel.text = Tool.returnWeekDay(dayWeatherInfo.week!)
-//        //        cell.temperatureLabel.text = dayWeatherInfo.temp_low! + "~" + dayWeatherInfo.temp_high!
-//        //        cell.weatherLabel.text = Tool.returnWeatherType(dayWeatherInfo.weather!)
-//        //        cell.weatherBgView.backgroundColor = Tool.returnWeatherBGColor(dayWeatherInfo.weather!)
+
        
     }
     
