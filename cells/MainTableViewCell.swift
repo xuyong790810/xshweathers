@@ -10,6 +10,7 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var messageImage: UIImageView!
     @IBOutlet weak var weahterLabel1: UILabel!
     @IBOutlet weak var weahter1: UIImageView!
     @IBOutlet weak var temLabel: UILabel!

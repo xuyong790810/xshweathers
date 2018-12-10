@@ -89,6 +89,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="messageImage" destination="sCg-m9-lbZ" id="qjA-98-MIb"/>
                 <outlet property="temLabel" destination="qha-qD-IrD" id="0XY-V3-jJF"/>
                 <outlet property="temLabel2" destination="4Be-y3-MCM" id="QmT-Dd-EeM"/>
                 <outlet property="weahter1" destination="9j6-Z2-bay" id="lmh-fu-WmF"/>

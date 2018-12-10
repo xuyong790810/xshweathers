@@ -23,7 +23,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             cell.temLabel.text=cur_weatherData!["temp_curr"] as? String
             cell.temLabel2.text=cur_weatherData!["temperature"] as? String
             cell.weahterLabel1.text=cur_weatherData!["weather"]as? String
-            
+            cell.messageImage.image=tool.returnMessageImage(hex: cur_weatherData!["weather"] as! String)
         cell.weahter1.image=tool.returnImageString(hex: cur_weatherData!["weather"] as! String)
         }
         return cell
@@ -35,8 +35,8 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var header=MJRefreshNormalHeader()
     override func viewDidLoad() {
         super.viewDidLoad()
-        layoutNavgate(date: tool.returnDateString(date: NSDate()), weekDay: tool.returnWeekDayString(date: NSDate()), city: "海口")
-        downloadData(cityname: "海口")
+        layoutNavgate(date: tool.returnDateString(date: NSDate()), weekDay: tool.returnWeekDayString(date: NSDate()), city: "三亚")
+        downloadData(cityname: "三亚")
         mytable=UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
         
         mytable?.mj_header=header

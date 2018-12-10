@@ -52,6 +52,20 @@ class tool
         }
         
     }
+    class func returnMessageImage(hex:String)->UIImage {
+        let messagePath=Bundle.main.path(forResource: "weatherMessage", ofType: "plist")
+        let messageJson=NSDictionary(contentsOfFile: messagePath!)
+        for myhex in (messageJson?.allKeys)!
+        {
+            if myhex as! String == hex || hex.hasPrefix(myhex as! String)
+            {
+                let imageName=messageJson![myhex as! String] as! String
+                return UIImage(named: imageName)!
+            }
+        }
+        
+        return UIImage()
+    }
     class func returnImageString(hex:String)->UIImage
     {
         let imagePath=Bundle.main.path(forResource: "weatherImage", ofType: "plist")
