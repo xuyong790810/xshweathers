@@ -8,23 +8,65 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell=tableView.dequeueReusableCell(withIdentifier: "maincell") as! MainTableViewCell
+       // cell.weahterLabel1.text=dataSource[0]["weather"] as! String
+        if cur_weatherData != nil
+        {
+            cell.temLabel.text=cur_weatherData!["temp_curr"] as? String
+            cell.temLabel2.text=cur_weatherData!["temperature"] as? String
+            cell.weahterLabel1.text=cur_weatherData!["weather"]as? String
+            
+        cell.weahter1.image=tool.returnImageString(hex: cur_weatherData!["weather"] as! String)
+        }
+        return cell
+    }
+    var cur_weatherData:NSDictionary?
     var mytable:UITableView?
     var image:UIImageView?
     var btn:UIButton?
     var header=MJRefreshNormalHeader()
     override func viewDidLoad() {
         super.viewDidLoad()
-        layoutNavgate(date: mytools.returnDateString(date: NSDate()), weekDay: mytools.returnWeekDay(date: NSDate()), city: "北海")
-        downloadData(cityname: "北海")
-    mytable=UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
-        self.view.addSubview(mytable!)
-    mytable?.mj_header=header
+        layoutNavgate(date: tool.returnDateString(date: NSDate()), weekDay: tool.returnWeekDayString(date: NSDate()), city: "海口")
+        downloadData(cityname: "海口")
+        mytable=UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
+        
+        mytable?.mj_header=header
         header.refreshingBlock={
             self.layoutNavgate(date: mytools.returnDateString(date: NSDate()), weekDay: mytools.returnWeekDay(date: NSDate()), city: "南宁")
             self.downloadData(cityname: "南宁")
         }
+        let nib=UINib(nibName: "MainTableViewCell", bundle: Bundle.main)
+        self.view.addSubview(mytable!)
+        mytable?.register(nib, forCellReuseIdentifier: "maincell")
+        mytable?.rowHeight=720
+        mytable?.delegate=self
+        mytable?.dataSource=self
+        mytable?.separatorStyle = .none
+        mytable?.allowsSelection=false
+        //        if #available(iOS 11.0, *) {
+        //            mytable!.contentInsetAdjustmentBehavior = .never
+        //        } else {
+        //            self.automaticallyAdjustsScrollViewInsets = false
+        //        }
         
+        
+        //        if #available(iOS 11.0, *) {
+        //            mytable?.contentInsetAdjustmentBehavior = .never
+        //            mytable?.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 49, right: 0)//导航栏如果使用系统原生半透明的，top设置为64
+        //            mytable?.scrollIndicatorInsets = (mytable?.contentInset)!
+        //        }
+        
+        
+        //mytable?.allowsSelection = false
     }
     
     func layoutNavgate(date:String,weekDay:String,city:String)
@@ -61,27 +103,58 @@ class MainViewController: UIViewController {
         let url=URL(string: urlst!)
         let session=URLSession.shared
         let datatask =   session.dataTask(with: url!) { (data, reponse, error) in
-        var jsonstr:NSDictionary?
+            var jsonstr:NSDictionary?
             
-        if data != nil{
+            if data != nil{
                 jsonstr=try?
-                JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+                    JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
                 let weathers = jsonstr!["result"] as! NSArray
                 let weather=weathers[0] as! NSDictionary
                 let weatherstr=weather["weather"] as! String
-            //发送通知
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "leftdata"), object: nil, userInfo: ["data":weathers])
-               
+                //发送通知
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "leftdata"), object: nil, userInfo: ["data":weathers])
+                
                 DispatchQueue.main.async {
                     self.view.backgroundColor=tool.retrunweatherColor(weatherType: weatherstr)
-                   self.mytable?.backgroundColor=tool.retrunweatherColor(weatherType: weatherstr)
+                    let indexPath=IndexPath(row: 0, section: 0)
+                    let cell=self.mytable?.cellForRow(at: indexPath) as! MainTableViewCell
+                    
+                    cell.contentView.backgroundColor=tool.retrunweatherColor(weatherType: weatherstr)
+                    
+                    
+                    self.mytable?.backgroundColor=tool.retrunweatherColor(weatherType: weatherstr)
                     self.navigationController?.navigationBar.backgroundColor=tool.retrunweatherColor(weatherType: weatherstr)
                     self.header.endRefreshing()
-                //self.view.backgroundColor = tool.returnWeatherBGColor(weatherType: weatherstr)
+                   
                 }
             }
         }
         datatask.resume()
+        let cur_urlstr="http://api.k780.com:88/?app=weather.today&weaid=\(cityname)&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json"
+        //下面这句允许url里有中文
+        let cur_urlst=cur_urlstr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        //把字符串转换成URL格式
+        let cur_url=URL(string: cur_urlst!)
+        let cur_session=URLSession.shared
+        let cur_datatask =   cur_session.dataTask(with: cur_url!) { (data, reponse, error) in
+            var jsonstr:NSDictionary?
+            
+            if data != nil{
+                jsonstr=try?
+                    JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+                self.cur_weatherData=jsonstr!["result"] as! NSDictionary
+                
+                
+                //发送通知
+               
+                
+                DispatchQueue.main.async {
+                   
+                    self.mytable?.reloadData()
+                }
+            }
+        }
+        cur_datatask.resume()
         
     }
     
@@ -95,12 +168,12 @@ class MainViewController: UIViewController {
         //接下来网络请求定义任务
         let task=session.dataTask(with: url) { (data, respone, error) in
             //第一步 接受的数据进行json序列化
-        let myInfo=try?      JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-        //逐层解析数据
-        let weathers = myInfo!["result"] as! NSArray
-        let weather=weathers[0] as! NSDictionary
-        let week=weather["weather"] as! String
-        print(week)
+            let myInfo=try?      JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+            //逐层解析数据
+            let weathers = myInfo!["result"] as! NSArray
+            let weather=weathers[0] as! NSDictionary
+            let week=weather["weather"] as! String
+            
         }
         //发送网络请求
         task.resume()

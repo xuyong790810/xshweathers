@@ -52,6 +52,19 @@ class tool
         }
         
     }
+    class func returnImageString(hex:String)->UIImage
+    {
+        let imagePath=Bundle.main.path(forResource: "weatherImage", ofType: "plist")
+        var imageJson=NSDictionary(contentsOfFile: imagePath!)
+        for myhex in (imageJson?.allKeys)!
+        {
+           if myhex as! String == hex || hex.hasPrefix(myhex as! String)
+           {
+            return UIImage(named: imageJson![myhex] as! String)!
+            }
+        }
+        return UIImage()
+    }
     class func returncolorString(hex:String)->UIColor
     {
         //FF6688

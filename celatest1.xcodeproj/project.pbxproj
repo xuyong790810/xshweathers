@@ -28,6 +28,8 @@
 		2E162B8121BB6F79002638B1 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E162B6A21BB6F79002638B1 /* MJRefreshBackFooter.m */; };
 		2E162B8221BB6F79002638B1 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E162B6B21BB6F79002638B1 /* MJRefreshAutoFooter.m */; };
 		2E162B8321BB6F79002638B1 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E162B6D21BB6F79002638B1 /* MJRefreshComponent.m */; };
+		2E162B8A21BBBF70002638B1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E162B8821BBBF70002638B1 /* MainTableViewCell.swift */; };
+		2E162B8B21BBBF70002638B1 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E162B8921BBBF70002638B1 /* MainTableViewCell.xib */; };
 		2E477A4A2180142C0026D832 /* LeftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A492180142C0026D832 /* LeftTableViewController.swift */; };
 		2E477A4D218014740026D832 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A4B218014740026D832 /* LeftTableViewCell.swift */; };
 		2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E477A4C218014740026D832 /* LeftTableViewCell.xib */; };
@@ -49,6 +51,8 @@
 		2EC3E14C21AE2AEA00946B0F /* weatherBG.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */; };
 		2EC3E14E21AE399900946B0F /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3E14D21AE399900946B0F /* helper.swift */; };
 		2EC3E15121AE3B5800946B0F /* weathersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3E15021AE3B5800946B0F /* weathersInfo.swift */; };
+		2ED0705721BE86C2004FA6FE /* weatherImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ED0705621BE86C2004FA6FE /* weatherImage.plist */; };
+		2ED0705921BE91AE004FA6FE /* weatherMessage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ED0705821BE91AE004FA6FE /* weatherMessage.plist */; };
 		2ED8890321A7EBE50085AF31 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8890221A7EBE50085AF31 /* Tools.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +116,8 @@
 		2E162B6E21BB6F79002638B1 /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
 		2E162B6F21BB6F79002638B1 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
 		2E162B8721BB711B002638B1 /* clearest1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clearest1-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E162B8821BBBF70002638B1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		2E162B8921BBBF70002638B1 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		2E477A492180142C0026D832 /* LeftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewController.swift; sourceTree = "<group>"; };
 		2E477A4B218014740026D832 /* LeftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTableViewCell.swift; sourceTree = "<group>"; };
 		2E477A4C218014740026D832 /* LeftTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftTableViewCell.xib; sourceTree = "<group>"; };
@@ -139,6 +145,8 @@
 		2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherBG.plist; sourceTree = "<group>"; };
 		2EC3E14D21AE399900946B0F /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		2EC3E15021AE3B5800946B0F /* weathersInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weathersInfo.swift; sourceTree = "<group>"; };
+		2ED0705621BE86C2004FA6FE /* weatherImage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherImage.plist; sourceTree = "<group>"; };
+		2ED0705821BE91AE004FA6FE /* weatherMessage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherMessage.plist; sourceTree = "<group>"; };
 		2ED8890221A7EBE50085AF31 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,6 +285,8 @@
 				2E477A50218058B90026D832 /* RightTableViewCell.swift */,
 				2E477A51218058B90026D832 /* RightTableViewCell.xib */,
 				2E477A4C218014740026D832 /* LeftTableViewCell.xib */,
+				2E162B8821BBBF70002638B1 /* MainTableViewCell.swift */,
+				2E162B8921BBBF70002638B1 /* MainTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -355,6 +365,8 @@
 		2ED8890121A7EBC70085AF31 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2ED0705821BE91AE004FA6FE /* weatherMessage.plist */,
+				2ED0705621BE86C2004FA6FE /* weatherImage.plist */,
 				2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */,
 				2ED8890221A7EBE50085AF31 /* Tools.swift */,
 				2EC3E14821AE213200946B0F /* tool.swift */,
@@ -470,12 +482,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E162B8B21BBBF70002638B1 /* MainTableViewCell.xib in Resources */,
+				2ED0705921BE91AE004FA6FE /* weatherMessage.plist in Resources */,
 				2E477A53218058B90026D832 /* RightTableViewCell.xib in Resources */,
 				2EC3E14C21AE2AEA00946B0F /* weatherBG.plist in Resources */,
 				2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */,
 				2EB30BDF2176CE0E003FA85D /* weatherCell.xib in Resources */,
 				2EB3F316215DBA26002D9864 /* LaunchScreen.storyboard in Resources */,
 				2EB3F313215DBA26002D9864 /* Assets.xcassets in Resources */,
+				2ED0705721BE86C2004FA6FE /* weatherImage.plist in Resources */,
 				2E162B7221BB6F79002638B1 /* MJRefresh.bundle in Resources */,
 				2EB3F311215DBA25002D9864 /* Main.storyboard in Resources */,
 			);
@@ -508,6 +523,7 @@
 				2EB3F33A215DBA8A002D9864 /* MainViewController.swift in Sources */,
 				2E162B7821BB6F79002638B1 /* MJRefreshBackNormalFooter.m in Sources */,
 				2E162B7621BB6F79002638B1 /* MJRefreshBackGifFooter.m in Sources */,
+				2E162B8A21BBBF70002638B1 /* MainTableViewCell.swift in Sources */,
 				2EC3E14921AE213200946B0F /* tool.swift in Sources */,
 				2E162B7321BB6F79002638B1 /* UIScrollView+MJExtension.m in Sources */,
 				2E162B7A21BB6F79002638B1 /* MJRefreshAutoGifFooter.m in Sources */,

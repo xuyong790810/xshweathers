@@ -10,13 +10,15 @@ import UIKit
 
 class LeftTableViewController: UITableViewController {
     //定义空数组
-    var dataSource=[NSDictionary]()
+   var dataSource=[NSDictionary]()
     override func viewDidLoad() {
         super.viewDidLoad()
        self.view.backgroundColor=UIColor.black
         let nib = UINib(nibName: "LeftTableViewCell", bundle: Bundle.main)
         self.tableView.register(nib, forCellReuseIdentifier: "mycell")
         self.tableView.rowHeight=100
+        self.tableView.separatorStyle = .none
+        self.tableView.allowsSelection=false
         //通知中心添加监视
         NotificationCenter.default.addObserver(self, selector: #selector(refreshdata), name: NSNotification.Name(rawValue: "leftdata"), object: nil)
        
@@ -25,6 +27,8 @@ class LeftTableViewController: UITableViewController {
     {
       //取出传过来的数组
         let userinfo=sender.userInfo!["data"] as! NSArray
+        //清空原来的数组
+        dataSource.removeAll()
       for fo in userinfo
       {
         let dic = fo as! NSDictionary
@@ -63,7 +67,7 @@ class LeftTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return self.dataSource.count
+        return dataSource.count
     }
     
     
@@ -82,11 +86,11 @@ class LeftTableViewController: UITableViewController {
         dateformatter.dateFormat="MM-dd"
         let date2string =  dateformatter.string(from: date!)
        cell.date2.text=date2string
-        cell.weather2.text=info["weather"] as! String
+       // cell.weather2.text=info["weather"] as! String
         cell.weather3.text=info["temperature"] as! String
-//        cell.weather2.text=tool.returnWeatherType(weatherType: info["weather"]! as! String)
+        cell.weather2.text=tool.returnWeatherType(weatherType: info["weather"]! as! String)
 //        cell.weather3.text=(info["temperature"] as! String)
-//        cell.view1.backgroundColor=tool.retrunweatherColor(weatherType: info["weather"] as! String)
+        cell.view1.backgroundColor=tool.retrunweatherColor(weatherType: info["weather"] as! String)
 //        //cell.view1.backgroundColor=tool.returnWeatherBGColor(weatherType: info["weather"]! as! String)
         //第一行是今天
         if indexPath.row==0

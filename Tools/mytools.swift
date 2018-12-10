@@ -46,7 +46,7 @@ class mytools{
             return WeekDays.Friday.rawValue
         case "Saturday":
             return WeekDays.Saturday.rawValue
-        case "sunday":
+        case "Sunday":
             return WeekDays.sunday.rawValue
         default:
             return "错误了"

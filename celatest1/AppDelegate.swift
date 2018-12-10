@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         //拿到导航条 uiimage()空图片，表示为透明幕布
         let nav=UINavigationBar.appearance()
         nav.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
