@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+import CoreLocation
+class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -33,10 +33,18 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var image:UIImageView?
     var btn:UIButton?
     var header=MJRefreshNormalHeader()
+    //拿到位置的经纬度
+    var locationManager:CLLocationManager?
+    //根据经纬度解析地名
+    var geocoder=CLGeocoder()
+    var city:String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        location()
+       
         layoutNavgate(date: tool.returnDateString(date: NSDate()), weekDay: tool.returnWeekDayString(date: NSDate()), city: "三亚")
         downloadData(cityname: "三亚")
+        
         mytable=UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
         
         mytable?.mj_header=header
@@ -52,6 +60,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         mytable?.dataSource=self
         mytable?.separatorStyle = .none
         mytable?.allowsSelection=false
+       
         //        if #available(iOS 11.0, *) {
         //            mytable!.contentInsetAdjustmentBehavior = .never
         //        } else {
@@ -68,7 +77,43 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         //mytable?.allowsSelection = false
     }
-    
+   
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("location error")
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+       
+        if locations.count>0
+        {
+           // locationManager?.stopUpdatingLocation()
+        let locationInfo=locations.last
+          
+            geocoder.reverseGeocodeLocation(locationInfo!, completionHandler: { (placeMark, error) in
+                 print(placeMark?.count)
+                if (placeMark?.count)! > 0
+           {
+            let placeM=placeMark![0]
+            print(placeM.locality)
+            self.city=placeM.locality
+                }
+            })
+        }
+    }
+    func location()
+    {
+        if CLLocationManager.locationServicesEnabled()==false
+        {
+            print("定位未打开")
+        }
+        else
+        {
+        locationManager=CLLocationManager()
+        locationManager?.requestWhenInUseAuthorization()
+        }
+        locationManager?.delegate=self
+        locationManager?.startUpdatingLocation()
+        
+    }
     func layoutNavgate(date:String,weekDay:String,city:String)
     {
         
@@ -158,26 +203,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
-    @objc func btnclick()
-    {
-        
-        let url:URL=URL(string: "http://api.k780.com:88/?app=weather.future&weaid=1&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json")!
-        
-        let session=URLSession.shared
-        //定义一个网络请求对象
-        //接下来网络请求定义任务
-        let task=session.dataTask(with: url) { (data, respone, error) in
-            //第一步 接受的数据进行json序列化
-            let myInfo=try?      JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
-            //逐层解析数据
-            let weathers = myInfo!["result"] as! NSArray
-            let weather=weathers[0] as! NSDictionary
-            let week=weather["weather"] as! String
-            
-        }
-        //发送网络请求
-        task.resume()
-    }
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
