@@ -54,6 +54,7 @@
 		2ED0705721BE86C2004FA6FE /* weatherImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ED0705621BE86C2004FA6FE /* weatherImage.plist */; };
 		2ED0705921BE91AE004FA6FE /* weatherMessage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2ED0705821BE91AE004FA6FE /* weatherMessage.plist */; };
 		2ED8890321A7EBE50085AF31 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED8890221A7EBE50085AF31 /* Tools.swift */; };
+		CCEA0D290B5765AB7DB5DBA2 /* libPods-celatest1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E48D08CE2D9C9E4313886F /* libPods-celatest1.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		246F92985C9B07E73B48C995 /* Pods-celatest1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celatest1.release.xcconfig"; path = "Pods/Target Support Files/Pods-celatest1/Pods-celatest1.release.xcconfig"; sourceTree = "<group>"; };
 		2E057BCA21AE74D600F5E1E9 /* mytools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mytools.swift; sourceTree = "<group>"; };
 		2E162B4221BB6F79002638B1 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		2E162B4321BB6F79002638B1 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
@@ -148,6 +150,8 @@
 		2ED0705621BE86C2004FA6FE /* weatherImage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherImage.plist; sourceTree = "<group>"; };
 		2ED0705821BE91AE004FA6FE /* weatherMessage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherMessage.plist; sourceTree = "<group>"; };
 		2ED8890221A7EBE50085AF31 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		61E48D08CE2D9C9E4313886F /* libPods-celatest1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-celatest1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77B5EB533214533405E407B /* Pods-celatest1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celatest1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-celatest1/Pods-celatest1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEA0D290B5765AB7DB5DBA2 /* libPods-celatest1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +307,8 @@
 				2EB3F31F215DBA26002D9864 /* celatest1Tests */,
 				2EB3F32A215DBA26002D9864 /* celatest1UITests */,
 				2EB3F309215DBA25002D9864 /* Products */,
+				D3056D5987591431C1BE332E /* Pods */,
+				E21033A328E4B1ABF33C1DD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -375,6 +382,23 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		D3056D5987591431C1BE332E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D77B5EB533214533405E407B /* Pods-celatest1.debug.xcconfig */,
+				246F92985C9B07E73B48C995 /* Pods-celatest1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E21033A328E4B1ABF33C1DD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61E48D08CE2D9C9E4313886F /* libPods-celatest1.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,6 +406,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EB3F330215DBA26002D9864 /* Build configuration list for PBXNativeTarget "celatest1" */;
 			buildPhases = (
+				960829F6E982E6B5E13CA2F8 /* [CP] Check Pods Manifest.lock */,
 				2EB3F304215DBA25002D9864 /* Sources */,
 				2EB3F305215DBA25002D9864 /* Frameworks */,
 				2EB3F306215DBA25002D9864 /* Resources */,
@@ -511,6 +536,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		960829F6E982E6B5E13CA2F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-celatest1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2EB3F304215DBA25002D9864 /* Sources */ = {
@@ -721,6 +771,7 @@
 		};
 		2EB3F331215DBA26002D9864 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D77B5EB533214533405E407B /* Pods-celatest1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -740,6 +791,7 @@
 		};
 		2EB3F332215DBA26002D9864 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 246F92985C9B07E73B48C995 /* Pods-celatest1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

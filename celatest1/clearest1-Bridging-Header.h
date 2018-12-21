@@ -9,5 +9,5 @@
 #ifndef clearest1_Bridging_Header_h
 #define clearest1_Bridging_Header_h
 #import "MJRefresh.h"
-
+#import <MBProgressHUD.h>
 #endif /* clearest1_Bridging_Header_h */
