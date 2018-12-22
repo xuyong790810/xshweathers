@@ -9,6 +9,7 @@
 import UIKit
 
 class RightTableViewController: UITableViewController {
+    var controllers:UIViewController?
 var section0title=["提醒","设置","支持"]
 var section1title=["添加","定位","南宁","北海","防城港","钦州"]
     var leftimages=["reminder","setting_right","contact"]
@@ -109,6 +110,28 @@ if indexPath.section==0
         {
             return 0
         }
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section==1
+        {
+            if indexPath.row==0
+            {
+                let mystoryboard = UIStoryboard(name: "Main", bundle: nil)
+                var ADDcontroller=mystoryboard.instantiateViewController(withIdentifier: "ADDTableViewController") as! ADDTableViewController
+                controllers?.present(ADDcontroller, animated: true, completion: {
+                    print("ok")
+                })
+            }
+                else if indexPath.row==1
+                {
+                    print("定位")
+                }
+                else
+                {
+                    print("城市")
+                }
+            }
+        
     }
     /*
     // Override to support conditional editing of the table view.

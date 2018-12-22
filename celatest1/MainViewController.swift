@@ -74,7 +74,6 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     var mycity=placeM.locality
                     if (mycity?.contains("市"))!
                     {
-                        // let rang = (mycity! as! NSString).range(of: "市")
                         mycity?.removeLast()
                     }
                     self.city=mycity
@@ -113,7 +112,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if mytable==nil
         {
         mytable=UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
-        
+       
         mytable?.mj_header=header
         header.refreshingBlock={
             self.layoutNavgate(date: mytools.returnDateString(date: NSDate()), weekDay: mytools.returnWeekDay(date: NSDate()), city: self.city!)
@@ -189,7 +188,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     self.navigationController?.navigationBar.backgroundColor=tool.retrunweatherColor(weatherType: weatherstr)
                     self.mytable?.reloadData()
                     self.mytable?.isHidden=false
-                    self.header.endRefreshing()
+                    
                    
                 }
             }
@@ -211,7 +210,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         self.cur_weatherData=jsonstr!["result"] as! NSDictionary
         
        
-                        
+                        self.header.endRefreshing()
         
         
                         DispatchQueue.main.async {
