@@ -35,12 +35,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     // 隐藏状态栏
-//    override var prefersStatusBarHidden: Bool{
-//        get{
-//            return true
-//        }
-//       
-//    }
+    override var prefersStatusBarHidden: Bool{
+        get{
+            return true
+        }
+       
+    }
     @objc func panAction(sender:UIPanGestureRecognizer )
     {
         //获取手指的位置

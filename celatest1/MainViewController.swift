@@ -40,7 +40,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let cell=tableView.dequeueReusableCell(withIdentifier: "maincell") as! MainTableViewCell
         // cell.weahterLabel1.text=dataSource[0]["weather"] as! String
-        print("1111")
+       
         if cur_weatherData != nil
         {
             cell.temLabel.text=cur_weatherData!["temp_curr"] as? String

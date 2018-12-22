@@ -38,8 +38,7 @@
 		2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E477A4C218014740026D832 /* LeftTableViewCell.xib */; };
 		2E477A52218058B90026D832 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E477A50218058B90026D832 /* RightTableViewCell.swift */; };
 		2E477A53218058B90026D832 /* RightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E477A51218058B90026D832 /* RightTableViewCell.xib */; };
-		2EB30BDE2176CE0E003FA85D /* weatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB30BDC2176CE0E003FA85D /* weatherCell.swift */; };
-		2EB30BDF2176CE0E003FA85D /* weatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EB30BDD2176CE0E003FA85D /* weatherCell.xib */; };
+		2E97AFAF21CE728500463CB8 /* default-city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E97AFAE21CE728500463CB8 /* default-city.plist */; };
 		2EB3F30C215DBA25002D9864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F30B215DBA25002D9864 /* AppDelegate.swift */; };
 		2EB3F30E215DBA25002D9864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F30D215DBA25002D9864 /* ViewController.swift */; };
 		2EB3F311215DBA25002D9864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB3F30F215DBA25002D9864 /* Main.storyboard */; };
@@ -48,7 +47,6 @@
 		2EB3F321215DBA26002D9864 /* celatest1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F320215DBA26002D9864 /* celatest1Tests.swift */; };
 		2EB3F32C215DBA26002D9864 /* celatest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F32B215DBA26002D9864 /* celatest1UITests.swift */; };
 		2EB3F33A215DBA8A002D9864 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F339215DBA8A002D9864 /* MainViewController.swift */; };
-		2EB3F33C215DBAA4002D9864 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */; };
 		2EB3F33E215DBAC0002D9864 /* RightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */; };
 		2EC3E14921AE213200946B0F /* tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3E14821AE213200946B0F /* tool.swift */; };
 		2EC3E14C21AE2AEA00946B0F /* weatherBG.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */; };
@@ -131,8 +129,7 @@
 		2E477A4C218014740026D832 /* LeftTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftTableViewCell.xib; sourceTree = "<group>"; };
 		2E477A50218058B90026D832 /* RightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
 		2E477A51218058B90026D832 /* RightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightTableViewCell.xib; sourceTree = "<group>"; };
-		2EB30BDC2176CE0E003FA85D /* weatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherCell.swift; sourceTree = "<group>"; };
-		2EB30BDD2176CE0E003FA85D /* weatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weatherCell.xib; sourceTree = "<group>"; };
+		2E97AFAE21CE728500463CB8 /* default-city.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "default-city.plist"; sourceTree = "<group>"; };
 		2EB3F308215DBA25002D9864 /* celatest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celatest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB3F30B215DBA25002D9864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EB3F30D215DBA25002D9864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +144,6 @@
 		2EB3F32B215DBA26002D9864 /* celatest1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celatest1UITests.swift; sourceTree = "<group>"; };
 		2EB3F32D215DBA26002D9864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EB3F339215DBA8A002D9864 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTableViewController.swift; sourceTree = "<group>"; };
 		2EC3E14821AE213200946B0F /* tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tool.swift; sourceTree = "<group>"; };
 		2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = weatherBG.plist; sourceTree = "<group>"; };
@@ -333,21 +329,19 @@
 		2EB3F30A215DBA25002D9864 /* celatest1 */ = {
 			isa = PBXGroup;
 			children = (
+				2E97AFAE21CE728500463CB8 /* default-city.plist */,
 				2E162B8721BB711B002638B1 /* clearest1-Bridging-Header.h */,
 				2E477A492180142C0026D832 /* LeftTableViewController.swift */,
 				2EB3F339215DBA8A002D9864 /* MainViewController.swift */,
 				2EB3F33D215DBAC0002D9864 /* RightTableViewController.swift */,
-				2EB3F33B215DBAA4002D9864 /* LeftViewController.swift */,
+				2E19AEAB21CC8946001A2720 /* ADDTableViewController.swift */,
 				2EB3F30B215DBA25002D9864 /* AppDelegate.swift */,
 				2EB3F30D215DBA25002D9864 /* ViewController.swift */,
-				2EB30BDC2176CE0E003FA85D /* weatherCell.swift */,
-				2EB30BDD2176CE0E003FA85D /* weatherCell.xib */,
 				2EB3F30F215DBA25002D9864 /* Main.storyboard */,
 				2EB3F312215DBA26002D9864 /* Assets.xcassets */,
 				2EB3F314215DBA26002D9864 /* LaunchScreen.storyboard */,
 				2EB3F317215DBA26002D9864 /* Info.plist */,
 				2EC3E14D21AE399900946B0F /* helper.swift */,
-				2E19AEAB21CC8946001A2720 /* ADDTableViewController.swift */,
 			);
 			path = celatest1;
 			sourceTree = "<group>";
@@ -519,9 +513,9 @@
 				2E162B8B21BBBF70002638B1 /* MainTableViewCell.xib in Resources */,
 				2ED0705921BE91AE004FA6FE /* weatherMessage.plist in Resources */,
 				2E477A53218058B90026D832 /* RightTableViewCell.xib in Resources */,
+				2E97AFAF21CE728500463CB8 /* default-city.plist in Resources */,
 				2EC3E14C21AE2AEA00946B0F /* weatherBG.plist in Resources */,
 				2E477A4E218014740026D832 /* LeftTableViewCell.xib in Resources */,
-				2EB30BDF2176CE0E003FA85D /* weatherCell.xib in Resources */,
 				2EB3F316215DBA26002D9864 /* LaunchScreen.storyboard in Resources */,
 				2EB3F313215DBA26002D9864 /* Assets.xcassets in Resources */,
 				2ED0705721BE86C2004FA6FE /* weatherImage.plist in Resources */,
@@ -593,8 +587,6 @@
 				2EC3E14E21AE399900946B0F /* helper.swift in Sources */,
 				2E477A52218058B90026D832 /* RightTableViewCell.swift in Sources */,
 				2E477A4A2180142C0026D832 /* LeftTableViewController.swift in Sources */,
-				2EB30BDE2176CE0E003FA85D /* weatherCell.swift in Sources */,
-				2EB3F33C215DBAA4002D9864 /* LeftViewController.swift in Sources */,
 				2E162B7121BB6F79002638B1 /* MJRefreshConst.m in Sources */,
 				2E162B7021BB6F79002638B1 /* UIScrollView+MJRefresh.m in Sources */,
 				2E162B8321BB6F79002638B1 /* MJRefreshComponent.m in Sources */,

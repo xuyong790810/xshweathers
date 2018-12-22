@@ -12,6 +12,7 @@ class ADDTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.contentView.backgroundColor=UIColor.black
         // Initialization code
     }
 
