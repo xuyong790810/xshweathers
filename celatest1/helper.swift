@@ -7,3 +7,17 @@
 //
 
 let LeftControllerTypeChangedNotification = "LeftControllerTypeChangedNotification"
+let AutoLocationNotification = "AutoLocationNotification"
+let chooseCityLocationNotification="chooseCityLocationNotification"
+class helper:NSObject
+{
+    class func readCashCity()->[String]
+    {
+        
+    }
+    class func insertCity()->Bool
+    {
+        
+    }
+    
+}

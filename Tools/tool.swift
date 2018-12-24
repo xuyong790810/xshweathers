@@ -45,7 +45,7 @@ class tool
             return weekDays.Friday.rawValue
         case "Saturday":
             return weekDays.Saturday.rawValue
-        case "sunday":
+        case "Sunday":
             return weekDays.sunday.rawValue
         default:
             return "出错"

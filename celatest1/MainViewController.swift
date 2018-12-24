@@ -22,8 +22,21 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var geocoder=CLGeocoder()
     var city:String?
     var hud:MBProgressHUD!
+    //MARK: 通知
+    @objc func aotuLoaction(sender:Notification)
+    {
+        self.location()
+    }
+    @objc func chooseCityLoaction(sender:Notification)
+    {
+        city=sender.userInfo!["chooseCity"] as! String
+        
+        initView()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(aotuLoaction), name: NSNotification.Name(rawValue: AutoLocationNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(chooseCityLoaction), name: NSNotification.Name(rawValue: chooseCityLocationNotification), object: nil)
         self.view.backgroundColor=UIColor.black
         //定位前的动画
         hud=MBProgressHUD.showAdded(to: self.view, animated: true)
@@ -214,7 +227,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         
                         DispatchQueue.main.async {
-        self.hud.hide(animated: true)
+                         self.hud.hide(animated: true)
                             self.mytable?.reloadData()
                         }
                     }

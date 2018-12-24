@@ -63,6 +63,7 @@ class ADDTableViewController: UITableViewController {
         {
             
         cell.textLabel?.text="自动定位"
+            cell.textLabel?.textColor=UIColor.white
         cell.imageView?.image = UIImage(named: "city")
         }
        
@@ -76,7 +77,18 @@ class ADDTableViewController: UITableViewController {
         
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row==0
+        {
+            NotificationCenter.default.post(name: NSNotification.Name(AutoLocationNotification), object: nil)
+        }
+        else
+        {
+           let city=cityArray[indexPath.row-1] as! String
+            NotificationCenter.default.post(name: NSNotification.Name(chooseCityLocationNotification), object: nil, userInfo: ["chooseCity":city])
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
    
     
     /*

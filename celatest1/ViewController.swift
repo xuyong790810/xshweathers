@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         mainVIew=UINavigationController(rootViewController: rootCon)
         leftView=LeftTableViewController()
         rightView=RightTableViewController()
-        rightView?.controllers=self
+        rightView?.controllers=mainVIew
         //添加子视图
         
         self.view.addSubview((leftView?.view)!)
