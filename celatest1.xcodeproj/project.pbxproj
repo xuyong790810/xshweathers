@@ -329,7 +329,6 @@
 		2EB3F30A215DBA25002D9864 /* celatest1 */ = {
 			isa = PBXGroup;
 			children = (
-				2E97AFAE21CE728500463CB8 /* default-city.plist */,
 				2E162B8721BB711B002638B1 /* clearest1-Bridging-Header.h */,
 				2E477A492180142C0026D832 /* LeftTableViewController.swift */,
 				2EB3F339215DBA8A002D9864 /* MainViewController.swift */,
@@ -378,6 +377,7 @@
 				2ED0705821BE91AE004FA6FE /* weatherMessage.plist */,
 				2ED0705621BE86C2004FA6FE /* weatherImage.plist */,
 				2EC3E14B21AE2AEA00946B0F /* weatherBG.plist */,
+				2E97AFAE21CE728500463CB8 /* default-city.plist */,
 				2ED8890221A7EBE50085AF31 /* Tools.swift */,
 				2EC3E14821AE213200946B0F /* tool.swift */,
 				2E057BCA21AE74D600F5E1E9 /* mytools.swift */,

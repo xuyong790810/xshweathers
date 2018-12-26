@@ -90,6 +90,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         mycity?.removeLast()
                     }
                     self.city=mycity
+                    helper.insertCity(city: self.city!)
                     DispatchQueue.main.async {
                         self.initView()
                     }

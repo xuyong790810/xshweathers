@@ -25,7 +25,7 @@ class ADDTableViewController: UITableViewController {
         search_tf.layer.cornerRadius=15
         search_tf.placeholder="城市名称或拼音"
         search_tf.leftView=UIImageView(image: UIImage(named: "search_b"))
-        search_tf.layer.masksToBounds=true
+        //search_tf.layer.masksToBounds=true
         search_tf.leftViewMode = .always
         headerView.addSubview(search_tf)
         self.tableView.separatorStyle = .none
@@ -86,6 +86,7 @@ class ADDTableViewController: UITableViewController {
         {
            let city=cityArray[indexPath.row-1] as! String
             NotificationCenter.default.post(name: NSNotification.Name(chooseCityLocationNotification), object: nil, userInfo: ["chooseCity":city])
+            helper.insertCity(city: city)
         }
         self.dismiss(animated: true, completion: nil)
     }

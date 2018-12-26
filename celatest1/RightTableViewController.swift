@@ -11,7 +11,7 @@ import UIKit
 class RightTableViewController: UITableViewController {
     var controllers:UIViewController?
 var section0title=["提醒","设置","支持"]
-var section1title=["添加","定位","南宁","北海","防城港","钦州"]
+var section1title=helper.readCashCity()
     var leftimages=["reminder","setting_right","contact"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ self.view.backgroundColor=UIColor.blue
         }
         else
        {
-        return section1title.count
+        return section1title.count+2
         }
         
     }
@@ -61,18 +61,21 @@ if indexPath.section==0
         if indexPath.row==0
         {
             cell.leftImageview.image=UIImage(named: "addcity")
+            cell.mylabel.text="添加"
         }
         else
         {
           cell.leftImageview.image=UIImage(named: "city")
+            cell.mylabel.text="定位"
         }
         cell.rightimageview.isHidden=true
     }
     else
     {
       cell.leftImageview.image=UIImage(named: "city")
+      cell.mylabel.text=section1title[indexPath.row-2]
     }
-    cell.mylabel.text=section1title[indexPath.row]
+    
         }
         // Configure the cell...
 
