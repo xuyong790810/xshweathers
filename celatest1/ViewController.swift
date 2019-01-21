@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         leftView=LeftTableViewController()
         rightView=RightTableViewController()
         rightView?.controllers=mainVIew
+        NotificationCenter.default.addObserver(self, selector: #selector(showMain), name: NSNotification.Name(rawValue: showMainNotification), object: nil)
         //添加子视图
         
         self.view.addSubview((leftView?.view)!)
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         mainVIew?.view.addGestureRecognizer(pan)
         // Do any additional setup after loading the view, typically from a nib.
     }
+
     // 隐藏状态栏
     override var prefersStatusBarHidden: Bool{
         get{
@@ -71,7 +73,7 @@ class ViewController: UIViewController {
     {
         self.mainVIew?.view.center=CGPoint(x:60-UIScreen.main.bounds.size.width*0.5 , y: UIScreen.main.bounds.size.height/2)
     }
-    func showMain()
+    @objc func showMain()
     {
         self.mainVIew?.view.center=CGPoint(x: UIScreen.main.bounds.size.width/2, y: UIScreen.main.bounds.size.height/2)
     }

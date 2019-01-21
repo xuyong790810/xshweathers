@@ -30,13 +30,14 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @objc func chooseCityLoaction(sender:Notification)
     {
         city=sender.userInfo!["chooseCity"] as! String
-        
+        helper.insertCity(city: city!)
         initView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(aotuLoaction), name: NSNotification.Name(rawValue: AutoLocationNotification), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(chooseCityLoaction), name: NSNotification.Name(rawValue: chooseCityLocationNotification), object: nil)
+      
         self.view.backgroundColor=UIColor.black
         //定位前的动画
         hud=MBProgressHUD.showAdded(to: self.view, animated: true)
@@ -45,6 +46,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         
     }
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

@@ -15,13 +15,22 @@ class RightTableViewCell: UITableViewCell {
     @IBOutlet weak var mylabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+        self.rightimageview.isUserInteractionEnabled=true
+        let tap=UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        rightimageview.addGestureRecognizer(tap)
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @objc func tapAction()
+{
+  
+  helper.deleteCity(city: (self.mylabel?.text)!)
+   NotificationCenter.default.post(name: NSNotification.Name(deleteCityNotification), object: nil)
+}
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
+ //   }
     
 }

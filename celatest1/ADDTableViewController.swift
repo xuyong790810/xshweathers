@@ -86,6 +86,7 @@ class ADDTableViewController: UITableViewController {
         {
            let city=cityArray[indexPath.row-1] as! String
             NotificationCenter.default.post(name: NSNotification.Name(chooseCityLocationNotification), object: nil, userInfo: ["chooseCity":city])
+       
             helper.insertCity(city: city)
         }
         self.dismiss(animated: true, completion: nil)

@@ -9,6 +9,8 @@
 let LeftControllerTypeChangedNotification = "LeftControllerTypeChangedNotification"
 let AutoLocationNotification = "AutoLocationNotification"
 let chooseCityLocationNotification="chooseCityLocationNotification"
+let showMainNotification="showMainNotification"
+let deleteCityNotification="deleteCityNotification"
 let history_City_Path=NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]+"/"+"history_City_Path.text"
 class helper:NSObject
 {
@@ -17,21 +19,24 @@ class helper:NSObject
         var cityArray=NSArray(contentsOfFile: history_City_Path)
         if cityArray==nil
         {
+            
             return []
         }
         else
         {
             if cityArray?.count==0
             {
+              
                 return []
             }
             else
             {
                 var citys=[String]()
-                for ele in citys
+                for ele in cityArray!
                 {
-                    citys.append(ele)
+                    citys.append(ele as! String)
                 }
+               
                 return citys
             }
             
@@ -40,7 +45,9 @@ class helper:NSObject
     }
     class func insertCity(city:String)->Bool
     {
+        //print(history_City_Path)
         var oldCity=readCashCity()
+        print(oldCity)
    if oldCity.contains(city)
    {
     let index=oldCity.firstIndex(of: city)
